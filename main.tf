@@ -2,10 +2,11 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "dev" {
-    ami = "ami-0cc9838aa7ab1dce7"
-    instance_type = "t2.micro"
-    tags = {
-      Name = "dev-ec2"
-    }
-}
+resource "aws_s3_bucket" "jenkinsmango" {
+  bucket = aws_s3_bucket
+  tags = { 
+
+    Name = "mynews3jenkins"
+
+  }
+  }
